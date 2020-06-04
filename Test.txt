@@ -1,2 +1,2 @@
-Das ist meine Test-Datei
-This is my test file
+My test file
+with some content
