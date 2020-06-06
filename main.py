@@ -1,14 +1,12 @@
-"""
-import csv
-
-with open("vocabulary.csv", newline='', encoding="utf-8") as file:
-    csv_file = csv.reader(file, delimiter=",")
-    for line in csv_file:
-        print(line)
-"""
-
 import pandas as pd
+import random
+
 df = pd.read_csv("vocabulary.csv")
+
+# used random to get one set of a word in 3 languages
+random_index = random.randint(1, len(df)-1)
+vocabulary_set_entry = df.iloc[random_index]
+vocabulary_set = vocabulary_set_entry[0].split(";")
 
 class Vocabulary():
 
@@ -22,5 +20,6 @@ class Vocabulary():
         print(self.de)
         print(self.fr)
 
-voc = Vocabulary("I","ich","moi")
+
+voc = Vocabulary(vocabulary_set[0], vocabulary_set[1], vocabulary_set[2])
 voc.show()
