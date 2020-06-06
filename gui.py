@@ -4,8 +4,8 @@ import ipywidgets as widgets
 from IPython.display import display
 
 widgets.Button(description="Push me")
-widgets.Text(description="My text", value"123")
-widgets.Checkbox(description"Description" value=False)
+widgets.Text(description="My text", value="123")
+widgets.Checkbox(description="Description", value=False)
 
 widgets.RadioButtons(
     options=['A','B','C'],
@@ -14,7 +14,7 @@ widgets.RadioButtons(
 )
 
 widgets.Dropdown(
-    options=['A','B','C']
-    description='Which letter?',
+    options=['A','B','C'],
+    description="Which letter?",
     disabled=False
 )
