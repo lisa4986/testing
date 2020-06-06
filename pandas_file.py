@@ -1,12 +1,11 @@
+# Python Chapter 18 - Part 231
 import pandas as pd
 df = pd.read_csv("vocabulary.csv")
-df
 ## output first 5 rows
-## df.head()
+print(df.head())
 ## length of list
-## len(df)
+print(len(df))
 ## column
-## df["English"]
+## print(df["English"])
 ## row - index 0
-## df.iloc[0]
-# Python Chapter 18 - Part 231
+print(df.iloc[0])
