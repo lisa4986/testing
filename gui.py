@@ -1,20 +1,24 @@
-# Python Chapter 16 - Part 187 ff
+import tkinter
 
-import ipywidgets as widgets
-from IPython.display import display
+def leftClickButtonCheck():
+    pass
 
-widgets.Button(description="Push me")
-widgets.Text(description="My text", value="123")
-widgets.Checkbox(description="Description", value=False)
+my_vocable = "my vocable"
 
-widgets.RadioButtons(
-    options=['A','B','C'],
-    description='Which letter?',
-    disabled=False
-)
+window = tkinter.Tk()
 
-widgets.Dropdown(
-    options=['A','B','C'],
-    description="Which letter?",
-    disabled=False
-)
+label_title = tkinter.Label(window, text="Vocabulary trainer")
+label_title.pack()
+
+button_check = tkinter.Button(window, text="Check")
+button_check.pack()
+
+label_vocable = tkinter.Label(window, text="Translate the following, please: " + my_vocable)
+label_vocable.pack()
+
+entry_solution = tkinter.Entry(window)
+entry_solution.pack()
+
+button_check.bind('<Button-1>', leftClickButtonCheck)
+
+window.mainloop()
